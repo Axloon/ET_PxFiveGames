@@ -22,6 +22,8 @@
       <li><a href="{% url 'galeria' %}">Galeria</a></li>
       <li><a href="{% url 'nosotros' %}">Nosotros</a></li>
       <li><a href="{% url 'contacto' %}">Contacto</a></li>
+      <li><a href="{% url 'agregar_producto' %}">Agregar producto</a></li>
+      <li><a href="{% url 'listar_productos' %}">Listado productos</a></li>
     </ul>
     <div class="main">
       {% if user.is_authenticated %}
