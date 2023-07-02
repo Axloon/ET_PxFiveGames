@@ -51,11 +51,11 @@ def agregar_producto(request):
     
     return render(request, 'pxfivegames/producto/agregar.html', data)
 
-def listar_producto(request):
-    producto = Producto.objects.all()
+def listar_productos(request):
+    productos = Producto.objects.all()
     
     data = {
-        'producto': producto
+        'productos': productos
     }
     
     return render(request, 'pxfivegames/producto/listar.html', data)
