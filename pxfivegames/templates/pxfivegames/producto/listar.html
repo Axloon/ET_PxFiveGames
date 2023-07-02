@@ -47,7 +47,7 @@
                 <th>Opciones</th>
             </tr>
         
-            {% for p in productos %}
+            {% for p in entity %}
         
             <tr>
                 <td>{{ p.categoria | capfirst }}</td>
@@ -69,6 +69,10 @@
             {% endfor %}
         
         </table>
+        <hr>
+        <div>
+            {% include 'pxfivegames/paginator.html' %}
+        </div>
         
     </div>
 </div>
