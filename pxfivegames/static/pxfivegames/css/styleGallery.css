@@ -1,0 +1,27 @@
+/*Contenido arriba*/
+
+.productos {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.producto {
+  width: 25%;
+  margin-top: 20px;
+}
+
+.producto img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.producto .detalle {
+  padding: 5px;
+}
+
+.producto .contenedor_producto {
+  background-color: white;
+  width: 80%;
+  margin: auto;
+}

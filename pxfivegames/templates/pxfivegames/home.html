@@ -1,0 +1,73 @@
+{% extends 'pxfivegames/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'pxfivegames/css/styleHome.css' %}">
+<style>
+  p {
+    color: #fff;
+  }
+
+</style>
+{% endblock %}
+
+{% block contenido %}
+
+
+<br><br><br><br><br>
+<section>
+    <div class="cards">
+      <div class="card">
+        <a href="#"><img src="{% static 'pxfivegames/img/juegosplay.jpg' %}" alt="" height="160" width="160"
+            class="card__image"></a>
+        <div class="card__content">
+          <p>
+            ¡Estos son los juegos disponibles en PxFive!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <a href="#"><img src="{% static 'pxfivegames/img/tiendaPxfive.jpg' %}" alt="" height="160" width="160"
+            class="card__image"></a>
+        <div class="card__content">
+          <p>
+            ¡PxFive tiene nuevo local y casa central!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <a href="#"><img src="{% static 'pxfivegames/img/directiva.jpeg' %}" alt="" height="160" width="160"
+            class="card__image"></a>
+        <div class="card__content">
+          <p>
+            ¡Cambio de directiva en PxFive!
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <a href="#"><img src="{% static 'pxfivegames/img/juegospopulares.jpg' %}" alt="" height="160" width="160"
+            class="card__image"></a>
+        <div class="card__content">
+          <p>
+            ¡Estos son los juegos más populares!
+          </p>
+        </div>
+      </div>
+    </div>
+</section>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}

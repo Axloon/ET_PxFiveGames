@@ -1,0 +1,97 @@
+{% extends 'pxfivegames/base.html' %}
+
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'pxfivegames/css/styleGallery.css' %}">
+<style>
+  .productos {
+    gap: 20px;
+    justify-items: center;
+    justify-content: center;
+  }
+
+  .producto {
+    border: 1px solid #ccc;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    
+  }
+
+  .producto img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+
+  .detalle {
+    padding: 10px;
+  }
+
+  .detalle h5 {
+    margin-top: 0;
+    color: #333;
+    font-size: 16px;
+  }
+
+  .detalle h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    color: #222;
+    font-size: 18px;
+  }
+
+  .detalle h3 {
+    margin-bottom: 0;
+    color: #4CAF50;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  .comprar-btn {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+
+  .comprar-btn:hover {
+    background-color: #45a049;
+  }
+</style>
+{% endblock %}
+
+{% block contenido %}
+
+{% load humanize %}
+<h2>Productos</h2>
+<div class="productos">
+  {% for p in productos %}
+  <div class="producto">
+    <div class="contenedor_producto">
+      {% if p.imagen %}
+      <img src="{{ p.imagen.url }}" alt="imagen producto">
+      {% endif %}
+      <div class="detalle">
+        <h5>{{ p.categoria | capfirst }}</h5>
+        <h2>{{ p.nombre | title }}</h2>
+        <h3>${{ p.precio | intcomma }}</h3>
+        <a href="#" class="comprar-btn">Comprar</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
+
+{% block js %}
+
+{% endblock %}
