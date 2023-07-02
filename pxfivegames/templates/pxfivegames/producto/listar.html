@@ -18,12 +18,11 @@
                 "showCancelButton": true,
                 "cancelButtonText": "No",
                 "confirmButtonText": "Si",
-                "confirmButtonColor": "#DC3545",
-                "cancelButtonColor": ""
+                "confirmButtonColor": "#DC3545"
             })
             .then(function(result) {
                 if(result.isConfirmed) {
-                    window.location.href = "eliminar-producto/" + id + "/"
+                    window.location.href = "/eliminar-producto/"+id+"/"
                 }
             })
         }
